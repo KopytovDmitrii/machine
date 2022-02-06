@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import Number from './Number.vue';
+import Number from './UI/Number.vue';
 export default {
   name: 'Footer',
   components: {
@@ -27,6 +27,10 @@ export default {
 .footer{
   background: #abcadc;
   height: 150px;
+  @media screen and (max-width: 900px) {
+      padding: 10px;
+      box-sizing: border-box;
+  }
   .footer-content{
     height: 100%;
     display: flex;
@@ -40,9 +44,16 @@ export default {
       border-top: 1px solid grey;
       padding-bottom: 10px;
       padding-top: 5px;
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        margin-top: 10px;
+      }
     }
     .content{
       padding-top: 20px;
+      @media screen and (max-width: 900px) {
+        padding: 0px;
+      }
       .phone{
         margin-top:5px
       }

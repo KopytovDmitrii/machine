@@ -65,6 +65,10 @@ export default {
 .descriptions {
   padding-top: 50px;
   padding-bottom: 50px;
+  @media screen and (max-width: 900px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 .descriptions-content{
   display: flex;
@@ -73,11 +77,18 @@ export default {
   .content{
     flex: 1;
     padding-right: 10px;
+    @media screen and (max-width: 900px) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
     .title{
       font-size: 42px;
       padding: 4px;
       font-weight: bold;
       margin-bottom: 50px;
+      @media screen and (max-width: 900px) {
+        font-size: 30px;
+      }
       .border{
         width: 170px;
         margin-left: 63px;
@@ -89,6 +100,9 @@ export default {
   .infograph{
     flex: 1;
     padding-left: 70px;
+     @media screen and (max-width: 900px) {
+      display: none;
+    }
     .border{
       border: 5px solid rgba(0,0,170,1);
       width: 412px;

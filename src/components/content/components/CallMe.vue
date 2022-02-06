@@ -2,17 +2,22 @@
    <div class="block-wrapper">
     <div class="content-wrapper callMe">
       <h2 class="title">Сломалась машинка? Звоните Нам!</h2>
-      <div class="btn callMaster">
-        <span>Вызвать мастера</span>
-        <div class="arrow"></div>
-      </div>
+      <btn
+        text="Вызвать мастера"
+        :isArrow="true"
+        numberTitle="Звоните:"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import btn from '../../UI/btn.vue';
 export default {
   name: 'CallMe',
+  components: {
+    btn
+  },
   props: {}
 }
 </script>
@@ -28,21 +33,8 @@ export default {
   margin-top: 35px;
   .title{
     padding: 30px;
+    padding-top: 0;
     text-align: center;
-  }
-  .callMaster{
-    position: relative;
-    .arrow{
-      position: absolute;
-      top: -45px;
-      left: -190px;
-      width: 168px;
-      height: 80px;
-      background-image: url('./../../../assets/arrow.png');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
 }
 </style>

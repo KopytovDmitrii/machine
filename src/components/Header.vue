@@ -8,7 +8,7 @@
 </template>
 W
 <script>
-import Number from './Number.vue';
+import Number from './UI/Number.vue';
 export default {
   name: 'Header',
   components: {
@@ -23,9 +23,16 @@ export default {
     background: white;
     width: 100%;
     height: 90px;
+    @media screen and (max-width: 900px) {
+        height: 50px;
+    }
     .header-content{
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 900px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
         .phone{
             display: flex;
@@ -33,11 +40,18 @@ export default {
             align-items: center;
             font-size: 18px;
             font-weight: bold;
+
+            @media screen and (max-width: 900px) {
+                font-size: 16px!important;
+            }
         }
     }
     .region{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: normal;
+        @media screen and (max-width: 900px) {
+            font-size: 16px!important;
+        }
     }
 }
 </style>

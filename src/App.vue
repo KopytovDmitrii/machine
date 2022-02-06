@@ -41,6 +41,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 h1{
@@ -52,21 +53,5 @@ h1{
   src: local("Roboto"),
    url(./fonts/roboto/Roboto-Light.ttf) format("truetype");
 }
-
- .btn{
-    width: 300px;
-    height: 50px;
-    background: rgba(0,0,170,1);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    letter-spacing:2px;
-    cursor: pointer;
-  }
 
 </style>

@@ -1,11 +1,17 @@
 <template>
-  <a href="tel:+79259886307">+7(925) 988-63-07</a>
+<span>
+  <span v-if="!!title">{{title}} </span>
+  <a href="tel:+79259886307">+7(925) 988-63-07 ☎</a>
+</span>
+  
 </template>
-W
+
 <script>
 export default {
   name: 'Number',
-  props: {}
+  props: {
+    title: String
+  }
 }
 </script>
 
