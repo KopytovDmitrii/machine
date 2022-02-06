@@ -1,9 +1,13 @@
 <template>
   <div class="btnwrap">
-    <div class="btn" @click="clickBtn">
+    <div class="btn" @click="clickBtn" v-if="!isMobile">
       <span>{{text}}</span>
       <div v-if="isArrow" class="arrow"></div>
     </div>
+    <a v-else class="btn" href="tel:+79259886307">
+        <span>{{text}}</span>
+        <div v-if="isArrow" class="arrow"></div>
+    </a>
     <Number class="btn-number" v-if="isNumber" :title="numberTitle" />
   </div>
 </template>
@@ -17,6 +21,7 @@ export default {
   },
   data: ()=>({
     isNumber: false,
+    isMobile: false,
   }),
   props: {
     text: String,
@@ -26,7 +31,20 @@ export default {
   methods: {
     clickBtn() {
       this.isNumber = !this.isNumber
+    },
+    setIsMobile() {
+      console.log('123');
+      let width = window.innerWidth;
+      if (width <= 900) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('resize', this.setIsMobile);
+    this.setIsMobile();
   }
 }
 </script>
@@ -46,6 +64,7 @@ export default {
     color: white;
     letter-spacing:2px;
     cursor: pointer;
+    text-decoration: none;
     position: relative;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

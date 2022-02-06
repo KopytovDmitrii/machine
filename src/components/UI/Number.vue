@@ -11,7 +11,7 @@ export default {
   name: 'Number',
   props: {
     title: String
-  }
+  },
 }
 </script>
 
