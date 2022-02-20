@@ -1,6 +1,6 @@
 <template>
   <div class="btnwrap">
-    <div class="btn" @click="clickBtn" v-if="!isMobile">
+    <div class="btn" :class='{miniBth: mini}' @click="clickBtn" v-if="!isMobile">
       <span>{{text}}</span>
       <div v-if="isArrow" class="arrow"></div>
     </div>
@@ -8,7 +8,7 @@
         <span>{{text}}</span>
         <div v-if="isArrow" class="arrow"></div>
     </a>
-    <Number class="btn-number" v-if="isNumber" :title="numberTitle" />
+    <Number class="btn-number" envers :class='{miniNumber: mini}' v-if="isNumber" :title="numberTitle" />
   </div>
 </template>
 
@@ -26,7 +26,9 @@ export default {
   props: {
     text: String,
     isArrow: Boolean,
-    numberTitle: String
+    numberTitle: String,
+    mini: Boolean,
+    envers: Boolean
   },
   methods: {
     clickBtn() {
@@ -86,12 +88,25 @@ export default {
     }
   }
 
+  .miniBth{
+    max-width: 200px;
+    min-width: 150px;
+    width: auto;
+    height: 40px;
+    font-size: 11px;
+  }
+
   .btnwrap{
     position: relative;
     .btn-number{
       position: absolute;
       left: 42px;
       bottom: -23px;
+    }
+    .miniNumber{
+      left: 12px;
+      bottom: -20px;
+      font-size: 13px;
     }
   }
 </style>

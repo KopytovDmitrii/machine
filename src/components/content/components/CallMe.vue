@@ -30,7 +30,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 300px;
-  margin-top: 35px;
+  margin-top: 50px;
   .title{
     padding: 30px;
     padding-top: 0;

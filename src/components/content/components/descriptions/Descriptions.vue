@@ -82,12 +82,12 @@ export default {
       padding-left: 20px;
     }
     .title{
-      font-size: 42px;
+      font-size: 36px;
       padding: 4px;
       font-weight: bold;
       margin-bottom: 50px;
       @media screen and (max-width: 900px) {
-        font-size: 30px;
+        font-size: 26px;
       }
       .border{
         width: 170px;
