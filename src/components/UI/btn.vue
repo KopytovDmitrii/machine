@@ -8,7 +8,7 @@
         <span>{{text}}</span>
         <div v-if="isArrow" class="arrow"></div>
     </a>
-    <Number class="btn-number" envers :class='{miniNumber: mini}' v-if="isNumber" :title="numberTitle" />
+    <Number class="btn-number" :envers="envers" :class='{miniNumber: mini}' v-if="isNumber" :title="numberTitle" />
   </div>
 </template>
 
